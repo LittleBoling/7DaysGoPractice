@@ -59,7 +59,7 @@ func (n *node) search(parts []string, height int) *node {
 	children := n.matchChildren(part)
 	for _, child := range children {
 		fmt.Println(child.part)
-		result := child.search(parts, height)
+		result := child.search(parts, height+1)
 		if result != nil {
 			return result
 		}
